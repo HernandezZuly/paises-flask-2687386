@@ -49,7 +49,7 @@ def paises():
     
     #Diccionario
     
-    paises = [
+   '''paises = [
         [
             {
                 "nombre" : "América",
@@ -90,10 +90,10 @@ def paises():
                 ]
             } 
         ]
-    ]
+    ]'''
     
     '''variables de conteo para cada continente'''
-    contador_paises_america = 0
+    '''contador_paises_america = 0
     for pais in paises[0][0]["paises"]:
         contador_paises_america = contador_paises_america + 1
     
@@ -107,7 +107,7 @@ def paises():
     
     contador_paises_africa = 0
     for pais in paises[3][0]["paises"]:
-        contador_paises_africa = contador_paises_africa + 1
+        contador_paises_africa = contador_paises_africa + 1'''
     
     #ESTRUCTURA TAREA 
     continentes = [
@@ -217,11 +217,28 @@ def paises():
         }
     ]
     
+    '''variables de conteo para cada continente'''
+    contador_paises_america = 0
+    for pais in paises[0]["continentes"]:
+        contador_paises_america = contador_paises_america + 1
+    
+    contador_paises_europa = 0
+    for pais in paises[1]["continentes"]:
+        contador_paises_europa = contador_paises_europa + 1
+    
+    contador_paises_asia = 0
+    for pais in paises[2]["continentes"]:
+        contador_paises_asia = contador_paises_asia + 1
+    
+    contador_paises_africa = 0
+    for pais in paises[3]["continentes"]:
+        contador_paises_africa = contador_paises_africa + 1
+    
     user = 'Zuly Ballesteros'
     #Para que retorno a una vista
     return render_template('paises_lista.html', 
                            user = user, 
-                           continentes = paises,
+                           continentes = continentes,
                            america = contador_paises_america, 
                            europa = contador_paises_europa,
                            asia = contador_paises_asia,
