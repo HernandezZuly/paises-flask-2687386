@@ -37,11 +37,16 @@
                     {% elif info.nombre == "África" %}
                         <td rowspan = "{{ africa }}"> 
                     {% endif %}
-                        {{ info.nombre }}
+                        {{ continente.nombre }}
                     </td>
-                    {% for pais in info.paises %}
-                    <td> {{ pais }} </td>
-                </tr>
+                    {% for pais in continente.paises %}
+                        <td> {{ pais.nombre }} </td>
+                        <td> {{ pais.nombre }} </td>
+                        <td> {{ pais.nombre }} </td>
+                        <td> {{ pais.nombre }} </td>
+                        <td> {{ pais.nombre }} </td>
+                        <td> {{ pais.nombre }} </td>
+            </tr>
                     {% endfor %}
             {% endfor %}
             </tr>
